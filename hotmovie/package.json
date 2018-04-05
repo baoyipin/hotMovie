@@ -109,7 +109,15 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "http-proxy-middleware": "^0.18.0",
     "less": "^3.0.1",
     "less-loader": "^4.1.0"
+  },
+  "proxy": {
+    "/Service/*": {
+      "target": "http://m.mtime.cn",
+      "changeOrigin": true,
+      "ws": true
+    }
   }
 }
