@@ -159,7 +159,7 @@ module.exports = {
           {
             test: /\.(css|less)$/,
             use: [
-              require.resolve('baseStyle-loader'),
+              require.resolve('style-loader'),
               {
                 loader: require.resolve('css-loader'),
                 options: {
