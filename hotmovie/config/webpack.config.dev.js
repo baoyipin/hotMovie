@@ -153,13 +153,13 @@ module.exports = {
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
-          // "style" loader turns CSS into JS modules that inject <style> tags.
+          // "baseStyle" loader turns CSS into JS modules that inject <baseStyle> tags.
           // In production, we use a plugin to extract that CSS to a file, but
-          // in development "style" loader enables hot editing of CSS.
+          // in development "baseStyle" loader enables hot editing of CSS.
           {
             test: /\.(css|less)$/,
             use: [
-              require.resolve('style-loader'),
+              require.resolve('baseStyle-loader'),
               {
                 loader: require.resolve('css-loader'),
                 options: {

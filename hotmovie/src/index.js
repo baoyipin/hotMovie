@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import ReactDOM,{render} from "react-dom";
+<<<<<<< HEAD
 import {Provider} from "react-redux";
 import {Route,HashRouter as Router,Switch} from "react-router-dom"
 import Home from "./container/home/Home";
@@ -8,6 +9,10 @@ import Article from "./container/article/Article";
 import Profile from "./container/profile/Profile";
 import store from "./store/index";
 import "./common/reset.less"
+=======
+import './baseStyle/reset.less';
+
+>>>>>>> 6eff723f1f0eba2a1c32552c7d5334c9e32bacb2
 
 
 render(
