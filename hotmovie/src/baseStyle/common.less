@@ -1,0 +1,106 @@
+@import './flexible_720p.less';
+
+// padding
+.PaddingTop(@val){
+    .px2rem(padding-top,@val);
+}
+.PaddingBottom(@val){
+    .px2rem(padding-bottom, @val);
+}
+
+.PaddingLeft(@val){
+    .px2rem(padding-left, @val);
+}
+
+.PaddingRight(@val){
+    .px2rem(padding-right, @val);
+}
+
+
+.MarginTop(@val){
+    .px2rem(margin-top,@val);
+}
+.MarginBottom(@val){
+    .px2rem(margin-bottom, @val);
+}
+
+.MarginLeft(@val){
+    .px2rem(margin-left, @val);
+}
+
+.MarginRight(@val){
+    .px2rem(margin-right, @val);
+}
+
+
+
+.Height(@val){
+    .px2rem(height, @val);
+}
+
+.Width(@val){
+    .px2rem(width, @val);
+}
+
+.FontSize(@val){
+    .px2px(font-size,@val);
+}
+
+
+.LineHeight(@val){
+    .px2rem(line-height, @val)
+}
+
+
+
+//FullAbsolute
+.FullContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+.MarginLeftRight(@width){
+    .MarginLeft(@width);
+    .MarginRight(@width);
+}
+
+.PaddingLeftRight(@val){
+    .PaddingLeft(@val);
+    .PaddingRight(@val);
+}
+
+.WhiteBg(){
+    background-color: #fff;
+}
+
+.border-1px {
+  background:
+          linear-gradient(180deg, transparent, #f0f0f0 50%, #f0f0f0 100%) top    left  / 100% 1px no-repeat,
+          linear-gradient(90deg,  #f0f0f0, #f0f0f0 50%,  transparent 100%) top    right / 1px 100% no-repeat,
+          linear-gradient(0,      transparent, #f0f0f0 50%, #f0f0f0 100%) bottom right / 100% 1px no-repeat,
+          linear-gradient(-90deg,  #f0f0f0, #f0f0f0 50%,  transparent 100%) bottom left  / 1px 100% no-repeat;
+  box-sizing: border-box;
+  padding: 1px;
+}
+
+.Line-2{
+    /* autoprefixer: off */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.Line-1{
+  /* autoprefixer: off */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+

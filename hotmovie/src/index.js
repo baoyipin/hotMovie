@@ -1,10 +1,7 @@
-import React, {Component} from 'react';
+import React,{Component} from "react";
+import ReactDOM,{render} from "react-dom";
+import './baseStyle/reset.less';
 
-export default class Home extends Component{
 
-    render(){
-        return(
-            <div>Home</div>
-        )
-    }
-}
+
+render(<div>hello world</div>,window.root);
