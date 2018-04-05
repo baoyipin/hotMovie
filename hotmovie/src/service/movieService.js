@@ -1,7 +1,7 @@
 import {Query} from '../Entities/Query/Query';
 
 // 首页
-let movieQuery =  new Query('Showtime');
+let movieQuery =  new Query('Service/callback.mi/Showtime');
 
 // 热门电影
 /**

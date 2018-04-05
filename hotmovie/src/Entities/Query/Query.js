@@ -5,7 +5,7 @@ const header = new Headers();
 header.append('Content-type',CONTENT_TYPE);
 
 export class Query {
-    constructor(prefix, baseUrl = reqUrl){
+    constructor(prefix, baseUrl = ''){
         this.prefix = prefix;
         if(!prefix.endsWith('/')){
             this.prefix = prefix + '/';
@@ -32,7 +32,7 @@ export class Query {
         let url = this._urlGenerator(api);
         url = getQueryStr(url,data);
 
-        this._requestHandler('GET',url,{});
+        return this._requestHandler('GET',url,{});
     }
 
     post(api, data) {
@@ -45,9 +45,11 @@ export class Query {
     _requestHandler(method,url,body) {
         return fetch(url,{
             method,
-            headers: header,
+            // headers: header,
             ...body,
-        }).then(this._responseFilter)
+        }).then(this._responseFilter).catch(e=>{
+            console.log(e);
+        })
     }
 
     _responseFilter = res =>{
