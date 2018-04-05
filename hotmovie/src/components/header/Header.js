@@ -1,10 +1,15 @@
 import React from "react";
-export default class Header extends React.Component{
+import "./header.less";
+import {withRouter} from "react-router-dom";
+class Header extends React.Component{
     render(){
         return (
-            <div>
-                header
+            <div className="header">
+               <i className="iconfont icon-fanhui" onClick={()=>{
+                   this.props.history.goBack();}}></i>
+                <span className="title">{this.props.children}</span>
             </div>
         )
     }
 }
+export default withRouter(Header)
