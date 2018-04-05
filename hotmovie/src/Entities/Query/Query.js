@@ -46,7 +46,6 @@ export class Query {
         return fetch(url,{
             method,
             headers: header,
-            mode: 'no-cors',
             ...body,
         }).then(this._responseFilter)
     }
