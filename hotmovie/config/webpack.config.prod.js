@@ -171,7 +171,7 @@ module.exports = {
               Object.assign(
                 {
                   fallback: {
-                    loader: require.resolve('baseStyle-loader'),
+                    loader: require.resolve('style-loader'),
                     options: {
                       hmr: false,
                     },
