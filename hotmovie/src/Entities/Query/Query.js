@@ -57,7 +57,6 @@ export class Query {
             return Promise.reject(res);
         }
         return res.json().then(data=>{
-            console.log(data);
             return data;
         })
     }

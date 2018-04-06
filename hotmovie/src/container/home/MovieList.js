@@ -1,4 +1,5 @@
 import React from "react";
+import MovieBlock from "./Block/MovieBlock";
 
 export default class MovieList extends React.Component{
     componentDidMount(){
@@ -7,7 +8,10 @@ export default class MovieList extends React.Component{
     render(){
         return (
             <div className="listBox">
-
+                {this.props.movies.map((item,index)=>(
+                    <MovieBlock key={index}
+                                movie={item}/>
+                ))}
             </div>
         )
     }

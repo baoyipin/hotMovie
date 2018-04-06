@@ -1,0 +1,37 @@
+@import '../../../baseStyle/common';
+
+.movie-item-wrap{
+  width: 100%;
+  display: flex;
+  .PaddingTop(10);
+  .PaddingBottom(10);
+  border-bottom: 1px solid #f0f0f0;
+  .PaddingRight(20);
+  .PaddingLeft(20);
+  box-sizing: border-box;
+  img{
+    .Width(220);
+    .Height(320);
+    object-fit: contain;
+  }
+  .movie-item-info{
+    .MarginLeft(20);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    h2{
+      .FontSize(40);
+      .Line-1;
+    }
+    p{
+      .FontSize(32);
+      .LineHeight(40);
+      .Line-1
+    }
+    .movie-des{
+      color: orange;
+      .FontSize(34);
+    }
+  }
+}
