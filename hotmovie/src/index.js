@@ -1,7 +1,5 @@
 import React,{Component} from "react";
 import ReactDOM,{render} from "react-dom";
-
-
 import {Provider} from "react-redux";
 import {Route,HashRouter as Router,Switch} from "react-router-dom"
 import Home from "./container/home/Home";
@@ -12,12 +10,10 @@ import store from "./store/index";
 
 import "./common/reset.less";
 import './baseStyle/reset.less';
+import Detail from "./container/detail/Detail";
 
 
 //import "./common/reset.less"
-
-
-
 
 
 render(
@@ -26,6 +22,7 @@ render(
             <Switch>
                 <Route path="/" exact={true} component={Home}></Route>
                 <Route path="/billboard" component={Billboard}></Route>
+                <Route path="/detail/:id" component={Detail}></Route>
                 <Route path="/article" component={Article}></Route>
                 <Route path="/profile" component={Profile}></Route>
             </Switch>

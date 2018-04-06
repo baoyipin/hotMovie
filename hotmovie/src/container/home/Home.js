@@ -19,14 +19,11 @@ export default class Home extends React.Component{
         let hotMovieInfo;
         getHotMovieInfo({t}).then((data)=> {
             hotMovieInfo=data.ms;
-            console.log(hotMovieInfo); 
+            console.log(hotMovieInfo);
             this.setState({movieList:hotMovieInfo},()=>{
                 console.log(this.state.movieList)
             })
         });
-
-
-
     }
     render(){
         return (
