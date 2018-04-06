@@ -16,13 +16,12 @@ import Detail from "./container/detail/Detail";
 //import "./common/reset.less"
 
 
-<<<<<<< HEAD
-=======
+
 import './baseStyle/reset.less';
 
 
 
->>>>>>> bb3a8bab50f3efd898a2a6c769edea6078616a59
+
 render(
     <Provider store={store}>
         <Router>

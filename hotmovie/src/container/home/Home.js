@@ -23,13 +23,13 @@ import {getHotMovieInfo} from "../../service/movieService";
             this.setState({movieList:hotMovieInfo},()=>{
                 console.log(this.state.movieList)
             })
-<<<<<<< HEAD
+
         });
-=======
+
         })*/
 
         this.props.getMovieAPI({t});
->>>>>>> bb3a8bab50f3efd898a2a6c769edea6078616a59
+
     }
 
     render(){
