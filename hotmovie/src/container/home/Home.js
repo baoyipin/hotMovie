@@ -9,34 +9,34 @@ import actions from "../../store/actions/home";
 //@connect(state=>({...state.home}),actions)
 import {getHotMovieInfo} from "../../service/movieService";
 
-export default class Home extends React.Component{
+ class Home extends React.Component{
     constructor(){
         super();
-        this.state={movieList:[]}
+        //this.state={movieList:[]}
     }
     componentDidMount(){
         let t=Date.now();
         let hotMovieInfo;
-        getHotMovieInfo({t}).then((data)=> {
+        /*getHotMovieInfo({t}).then((data)=> {
             hotMovieInfo=data.ms;
             console.log(hotMovieInfo); 
             this.setState({movieList:hotMovieInfo},()=>{
                 console.log(this.state.movieList)
             })
-        });
+        })*/
 
-
-
+        this.props.getMovieAPI({t});
     }
+
     render(){
         return (
             <div className="homeContainer">
                 <HomeHeader/>
                 <Slider/>
-                <MovieList movies={this.state.movieList}/>
+                <MovieList movies={this.props.movieList}/>
                 <Footer/>
             </div>
         )
     }
 }
-//export default connect(state=>({...state.home}),actions)(Home);
+export default connect(state=>({...state.home}),actions)(Home);
