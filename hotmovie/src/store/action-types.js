@@ -1,1 +1,3 @@
 export const SET_MOVIE_LIST="SET_MOVIE_LIST";
+export const SET_MOVIE_INFO="SET_MOVIE_INFO";
+export const SET_BILLBOARD="SET_BILLBOARD";

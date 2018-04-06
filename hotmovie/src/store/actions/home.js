@@ -1,5 +1,5 @@
 import * as types from "../action-types";
-import {getHotMovieInfo} from "../../service/movieService";
+import {getHotMovieInfo,getMovieDetailInfo} from "../../service/movieService";
 /*
 export default  {
     getMovieAPI(){
@@ -19,6 +19,14 @@ export default {
             }).catch(e=>{
                 console.log('获取电影列表失败--',e);
             })
+        }
+    },
+    getMovieInfoAPI(params){
+        return function (dispach,getState) {
+            getMovieDetailInfo(params).then(data=>{
+                console.log(data);
+                dispach({type:types.SET_MOVIE_INFO,payload:data})
+            }).catch(e=>{console.log("获取电影详情失败--"),e})
         }
     }
 }

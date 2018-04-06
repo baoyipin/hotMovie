@@ -6,6 +6,7 @@ import Home from "./container/home/Home";
 import Billboard from "./container/billboard/Billboard";
 import Article from "./container/article/Article";
 import Profile from "./container/profile/Profile";
+import More from "./container/billboard/More";
 import store from "./store/index";
 
 import "./common/reset.less";
@@ -31,6 +32,7 @@ render(
                 <Route path="/detail/:id" component={Detail}></Route>
                 <Route path="/article" component={Article}></Route>
                 <Route path="/profile" component={Profile}></Route>
+                <Route path="/meantime" component={More}></Route>
             </Switch>
         </Router>
     </Provider>
