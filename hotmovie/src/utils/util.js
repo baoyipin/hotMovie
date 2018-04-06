@@ -7,3 +7,6 @@ export function formatTimeString(timeStamp) {
     return `${t.getFullYear()}${t.getMonth()+1}${t.getDate()}${t.getHours()}${t.getMinutes()}`;
 }
 //hello world
+export function fn() {
+    
+}
