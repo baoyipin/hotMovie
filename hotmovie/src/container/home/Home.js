@@ -19,13 +19,17 @@ import {getHotMovieInfo} from "../../service/movieService";
         let hotMovieInfo;
         /*getHotMovieInfo({t}).then((data)=> {
             hotMovieInfo=data.ms;
-            console.log(hotMovieInfo); 
+            console.log(hotMovieInfo);
             this.setState({movieList:hotMovieInfo},()=>{
                 console.log(this.state.movieList)
             })
+
+        });
+
         })*/
 
         this.props.getMovieAPI({t});
+
     }
 
     render(){
