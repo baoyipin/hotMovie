@@ -9,6 +9,7 @@ import Profile from "./container/profile/Profile";
 import store from "./store/index";
 import "./common/reset.less"
 
+import './baseStyle/reset.less';
 
 
 
