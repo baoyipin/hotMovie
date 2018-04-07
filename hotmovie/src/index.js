@@ -12,16 +12,11 @@ import store from "./store/index";
 import "./common/reset.less";
 import './baseStyle/reset.less';
 import Detail from "./container/detail/Detail";
-
-
 //import "./common/reset.less"
-
-
-
 import './baseStyle/reset.less';
-
-
-
+import Reg from "./container/profile/reg/Reg";
+import Login from "./container/profile/login/Login";
+import ProtectedRoute from "./ProtectedRoute";
 
 render(
     <Provider store={store}>
@@ -30,9 +25,11 @@ render(
                 <Route path="/" exact={true} component={Home}></Route>
                 <Route path="/billboard" component={Billboard}></Route>
                 <Route path="/detail/:id" component={Detail}></Route>
-                <Route path="/article" component={Article}></Route>
+                <ProtectedRoute path="/article" component={Article}></ProtectedRoute>
                 <Route path="/profile" component={Profile}></Route>
                 <Route path="/meantime" component={More}></Route>
+                <Route path="/reg" component={Reg}></Route>
+                <Route path="/login" component={Login}></Route>
             </Switch>
         </Router>
     </Provider>
